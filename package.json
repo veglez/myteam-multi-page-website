@@ -1,0 +1,20 @@
+{
+  "name": "myteam-multi-page-website",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Valentin Eduardo Gonzalez Morales",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "eslint": "^8.25.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "live-server": "^1.2.2",
+    "prettier": "^2.7.1",
+    "sass": "^1.55.0"
+  },
+  "scripts": {
+    "start": "concurrently \"live-server src/\" \"sass -w src/styles/main.scss src/styles/index.css\""
+  }
+}
