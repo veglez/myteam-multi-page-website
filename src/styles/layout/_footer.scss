@@ -59,11 +59,9 @@
   .footer {
     padding: 48px 165px;
     grid-template-areas:
-      "logo logo .  address address . . . . icons"
-      ". . .  address address . . . . ."
-      "nav nav .  address address . . . . copyright";
-    // justify-content: flex-start;
-    // justify-items: center;
+      "logo logo .  address address address . . . . icons"
+      ". . .  address address address . . . . ."
+      "nav nav .  address address address . . . . copyright";
     align-items: flex-start;
     gap: 0px;
 
@@ -73,6 +71,10 @@
 
     &__nav {
       gap: 40px;
+    }
+
+    &__icons {
+      justify-self: flex-end;
     }
 
     &__copyright {

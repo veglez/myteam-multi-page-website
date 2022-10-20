@@ -19,6 +19,44 @@
   &__description {
     @include body(1.5rem, 2.8rem);
   }
+
+  @include respond-to("medium") {
+    padding: 80px 24px 256px;
+    &__description {
+      max-width: 457px;
+    }
+  }
+
+  @include respond-to("large") {
+    padding: 129px 165px 250px;
+    background-image: url("../../statics/bg-pattern-home-2.svg"),
+      url("../../statics/bg-pattern-home-1.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 0px right 165px, -100px 129px;
+    @include flex(row, 30px);
+    align-items: flex-end;
+
+    &__title {
+      @include h1-large;
+      text-align: left;
+    }
+
+    &__description {
+      @include body(1.8rem, 2.8rem);
+      text-align: left;
+      max-width: 445px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 4px;
+        background-color: $border-color;
+        position: relative;
+        bottom: 84px;
+      }
+    }
+  }
 }
 
 .features {
@@ -44,19 +82,93 @@
       background-color: $light-coral;
     }
   }
+
+  @include respond-to("medium") {
+    padding: 136px 98px 100px;
+    @include flex(column, 32px);
+    &__title {
+      width: 445px;
+    }
+  }
+
+  @include respond-to("large") {
+    background-position: bottom right -100px;
+    padding: 198px 165px 140px;
+    gap: 32px 125px;
+    display: grid;
+    grid-template-areas:
+      "title art1"
+      "title art2"
+      "title art3";
+
+    &__title {
+      grid-area: title;
+      @include h2;
+    }
+
+    &__art {
+      &:nth-of-type(1) {
+        grid-area: art1;
+      }
+      &:nth-of-type(2) {
+        grid-area: art2;
+      }
+      &:nth-of-type(3) {
+        grid-area: art3;
+      }
+    }
+  }
 }
 
 .testimonies {
   padding: 140px 24px;
   @include flex(column, 48px);
+  background-image: url("../../statics/bg-pattern-home-4-about-3.svg"),
+    url("../../statics/bg-pattern-home-5.svg");
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
 
   &__title {
     @include headers(3.2rem, 3.2rem);
     text-align: center;
-    margin-block-end: 13px; // why 13px ?
+    margin-block-end: -13px; // why 13px ?
   }
 
-  &__sucess {
+  &__success {
     color: $rapture-blue;
+  }
+
+  @include respond-to("medium") {
+    &__success {
+      display: block;
+    }
+  }
+
+  @include respond-to("large") {
+    padding: 140px 165px;
+    display: grid;
+    grid-template-areas:
+      "title title title"
+      "art1 art2 art3";
+    justify-items: center;
+
+    &__title {
+      grid-area: title;
+      max-width: 932px;
+      text-align: center;
+      @include h2;
+    }
+
+    &__art {
+      &:nth-of-type(1) {
+        grid-area: art1;
+      }
+      &:nth-of-type(2) {
+        grid-area: art2;
+      }
+      &:nth-of-type(3) {
+        grid-area: art3;
+      }
+    }
   }
 }

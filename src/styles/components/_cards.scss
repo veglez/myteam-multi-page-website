@@ -16,6 +16,26 @@
     margin-block-start: -8px;
     opacity: (0.8);
   }
+
+  @include respond-to("medium") {
+    grid-template-areas:
+      "img title"
+      "img description";
+    gap: 16px 23px;
+    justify-items: flex-start;
+
+    &__img {
+      grid-area: img;
+    }
+
+    &__title {
+      grid-area: title;
+    }
+
+    &__description {
+      grid-area: description;
+    }
+  }
 }
 
 .testimony {

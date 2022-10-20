@@ -14,7 +14,21 @@
   }
 
   &__nav {
-    @include grid-centered(0px);
-    display: none;
+    // @include grid-centered(0px);
+    // display: none;
+  }
+
+  @include respond-to("medium") {
+    padding: 48px 40px;
+    gap: 48px;
+    justify-content: flex-start;
+
+    &__burguer {
+      display: none;
+    }
+
+    &__nav {
+      display: block;
+    }
   }
 }

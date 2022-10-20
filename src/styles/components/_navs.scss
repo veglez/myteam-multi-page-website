@@ -1,5 +1,30 @@
 .nav-primary {
-  background-color: $midnight-green;
+  background-color: $police-blue;
+  background-image: url("../../statics/bg-pattern-about-1-mobile-nav-1.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right -100px;
+  @include flex(column, 39px);
+  width: math.div(255px, 375px) * 100%;
+  height: 100vh;
+  padding: 56px 25px 100px 48px;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &__close {
+    width: 18px;
+    align-self: flex-end;
+  }
+
+  a {
+    &:nth-of-type(2) {
+      margin-block-start: -15px;
+    }
+
+    &:nth-of-type(3) {
+      margin-block-start: -18px;
+    }
+  }
 }
 
 .nav-secondary {

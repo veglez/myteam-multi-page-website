@@ -2,11 +2,19 @@
   background-color: $light-coral;
   @include flex(column, 24px);
   padding: 8.3rem 2.4rem;
+  align-items: center;
+  background-image: url("../../statics/bg-pattern-home-6-about-5.svg");
+  background-repeat: no-repeat;
+  background-position: bottom -22px left;
 
   &__title {
     @include headers(3.2rem, 3.2rem);
     color: $sacramento-state-green;
     text-align: center;
+  }
+
+  &__CTA {
+    width: 157px;
   }
 
   @include respond-to("medium") {

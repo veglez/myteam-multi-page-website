@@ -1,7 +1,7 @@
 .btn {
   padding: 9px 33px 11px 32px;
   border-radius: 24px;
-  @include h3;
+  @include body1;
   background-color: transparent;
 
   &--primary-dark {
@@ -10,6 +10,15 @@
     &:hover {
       background-color: $sacramento-state-green;
       color: $white;
+    }
+  }
+
+  &--primary-light {
+    border: 2px solid $white;
+
+    &:hover {
+      background-color: $white;
+      color: $sacramento-state-green;
     }
   }
 }
