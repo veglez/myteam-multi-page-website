@@ -1,0 +1,14 @@
+.nav-primary {
+  background-color: $midnight-green;
+}
+
+.nav-secondary {
+  display: flex;
+  gap: 24px;
+
+  &__link {
+    &:hover {
+      color: $light-coral;
+    }
+  }
+}

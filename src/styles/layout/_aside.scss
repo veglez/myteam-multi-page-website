@@ -1,0 +1,27 @@
+.aside {
+  background-color: $light-coral;
+  @include flex(column, 24px);
+  padding: 8.3rem 2.4rem;
+
+  &__title {
+    @include headers(3.2rem, 3.2rem);
+    color: $sacramento-state-green;
+    text-align: center;
+  }
+
+  @include respond-to("medium") {
+    flex-direction: row;
+    gap: 84px;
+    align-items: center;
+    padding: 76px 94px;
+    justify-content: space-between;
+
+    &__title {
+      text-align: start;
+    }
+  }
+
+  @include respond-to("large") {
+    padding: 76px 260px;
+  }
+}

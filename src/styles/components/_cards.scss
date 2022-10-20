@@ -1,0 +1,63 @@
+.feature {
+  @include grid-centered(16px);
+
+  &__img {
+    width: 72px;
+    height: 72px;
+  }
+
+  &__title {
+    color: $light-coral;
+    @include h3;
+  }
+
+  &__description {
+    @include body2;
+    margin-block-start: -8px;
+    opacity: (0.8);
+  }
+}
+
+.testimony {
+  width: 327px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  @include grid-centered(16px);
+  @include body2;
+
+  &__quotes {
+    width: 67px;
+    height: 56px;
+    position: relative;
+    // it refers to testimonies container gap minus
+    // relative position top 35px
+    top: 35px;
+    z-index: 1;
+  }
+
+  &__message {
+    z-index: 2;
+  }
+
+  &__person-name {
+    @include h3;
+    color: $rapture-blue;
+  }
+
+  &__job-position {
+    margin-block-start: -14px;
+    @include body(1.3rem, 1 0.8rem);
+    font-style: italic;
+  }
+
+  &__photo {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: 2px solid $border-color;
+    display: grid;
+    justify-content: stretch;
+    overflow: hidden;
+  }
+}

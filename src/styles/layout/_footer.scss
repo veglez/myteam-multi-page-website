@@ -1,0 +1,82 @@
+.footer {
+  background-color: $dark-green;
+  padding: 66px 24px;
+  display: grid;
+  gap: 24px;
+  place-items: center;
+  grid-template-areas: "logo" "nav" "address" "icons" "copyright";
+  color: $white;
+  @include body2;
+
+  &__logo {
+    grid-area: logo;
+    width: 96px;
+  }
+
+  &__nav {
+    grid-area: nav;
+  }
+
+  &__address {
+    grid-area: address;
+    opacity: (0.6);
+    text-align: center;
+  }
+
+  &__icons {
+    grid-area: icons;
+    margin-block-start: 16px;
+  }
+
+  &__copyright {
+    grid-area: copyright;
+    margin-block-start: -8px;
+    opacity: (0.6);
+  }
+}
+
+@include respond-to("medium") {
+  .footer {
+    padding: 56px 40px;
+    grid-template-areas:
+      "logo address"
+      "nav address"
+      "icons  copyright";
+    justify-content: space-between;
+    gap: 32px;
+
+    &__nav {
+      @include body1;
+    }
+
+    &__icons {
+      margin-block-start: 0px;
+    }
+  }
+}
+
+@include respond-to("large") {
+  .footer {
+    padding: 48px 165px;
+    grid-template-areas:
+      "logo logo .  address address . . . . icons"
+      ". . .  address address . . . . ."
+      "nav nav .  address address . . . . copyright";
+    // justify-content: flex-start;
+    // justify-items: center;
+    align-items: flex-start;
+    gap: 0px;
+
+    &__logo {
+      width: 160px;
+    }
+
+    &__nav {
+      gap: 40px;
+    }
+
+    &__copyright {
+      margin: 0px;
+    }
+  }
+}

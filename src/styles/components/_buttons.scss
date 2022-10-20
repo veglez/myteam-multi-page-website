@@ -1,0 +1,15 @@
+.btn {
+  padding: 9px 33px 11px 32px;
+  border-radius: 24px;
+  @include h3;
+  background-color: transparent;
+
+  &--primary-dark {
+    color: $sacramento-state-green;
+    border: $sacramento-state-green 2px solid;
+    &:hover {
+      background-color: $sacramento-state-green;
+      color: $white;
+    }
+  }
+}

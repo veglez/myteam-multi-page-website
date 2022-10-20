@@ -8,31 +8,186 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="./statics/favicon-32x32.png"
     />
 
     <title>Frontend Mentor | myteam website challenge - Homepage</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Livvic:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    home about contact us Find the best talent Finding the right people and
-    building high performing teams can be hard. Most companies aren’t tapping
-    into the abundance of global talent. We’re about to change that. Build &
-    manage distributed teams like no one else. Experienced Individuals Our
-    network is made up of highly experienced professionals who are passionate
-    about what they do. Easy to Implement Our processes have been refined over
-    years of implementation meaning our teams always deliver. Enhanced
-    Productivity Our customized platform with in-built analytics helps you
-    manage your distributed teams. Delivering real results for top companies.
-    Some of our success stories. “The team perfectly fit the specialized skill
-    set required. They focused on the most essential features helping us launch
-    the platform eight months faster than planned.” Kady Baker Product Manager
-    at Bookmark “We needed to automate our entire onboarding process. The team
-    came in and built out the whole journey. Since going live, user retention
-    has gone through the roof!” Aiysha Reese Founder of Manage “Amazing. Our
-    team helped us build an app that delivered a new experience for hiring a
-    physio. The launch was an instant success with 100k downloads in the first
-    month.” Arthur Clarke Co-founder of MyPhysio Ready to get started? contact
-    us home about 987 Hillcrest Lane Irvine, CA California 92714 Call Us :
-    949-833-7432 Copyright 2020. All Rights Reserved
+    <header class="header">
+      <figure class="header__img">
+        <img src="./statics/logo.svg" alt="my team's logo" />
+      </figure>
+      <figure class="header__burguer">
+        <img src="./statics/icon-hamburger.svg" alt="" />
+      </figure>
+      <nav class="nav-primary header__nav">
+        <a href="./index.html">home</a>
+        <a href="./about.html">about</a>
+        <a href="./contact.html">contact us</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="introduction">
+        <h1 class="introduction__title">
+          Find the <br />
+          best
+          <span class="introduction__talent"> talent </span>
+        </h1>
+        <p class="introduction__description">
+          Finding the right people and building high performing teams can be
+          hard. Most companies aren’t tapping into the abundance of global
+          talent. We’re about to change that.
+        </p>
+      </section>
+
+      <section class="features">
+        <h2 class="features__title">
+          Build & manage distributed teams like no one else.
+        </h2>
+
+        <article class="feature">
+          <figure class="feature__img">
+            <img src="./statics/icon-person.svg" alt="person icon" />
+          </figure>
+          <h3 class="feature__title">Experienced Individuals</h3>
+          <p class="feature__description">
+            Our network is made up of highly experienced professionals who are
+            passionate about what they do.
+          </p>
+        </article>
+
+        <article class="feature">
+          <figure class="feature__img">
+            <img src="./statics/icon-cog.svg" alt="engine icon" />
+          </figure>
+          <h3 class="feature__title">Easy to Implement</h3>
+          <p class="feature__description">
+            Our processes have been refined over years of implementation meaning
+            our teams always deliver.
+          </p>
+        </article>
+
+        <article class="feature">
+          <figure class="feature__img">
+            <img src="./statics/icon-chart.svg" alt="chart icon" />
+          </figure>
+          <h3 class="feature__title">Enhanced Productivity</h3>
+          <p class="feature__description">
+            Our customized platform with in-built analytics helps you manage
+            your distributed teams.
+          </p>
+        </article>
+      </section>
+
+      <section class="testimonies">
+        <h2 class="testimonies__title">
+          Delivering real results for top companies. Some of our
+          <span class="testimonies__sucess"> success stories.</span>
+        </h2>
+
+        <article class="testimony">
+          <figure class="testimony__quotes">
+            <img src="./statics/icon-quotes.svg" alt="" />
+          </figure>
+          <p class="testimony__message">
+            “The team perfectly fit the specialized skill set required. They
+            focused on the most essential features helping us launch the
+            platform eight months faster than planned.”
+          </p>
+          <h3 class="testimony__person-name">Kady Baker</h3>
+          <h4 class="testimony__job-position">Product Manager at Bookmark</h4>
+          <figure class="testimony__photo">
+            <img src="./statics/avatar-kady.jpg" alt="kady's photo" />
+          </figure>
+        </article>
+
+        <article class="testimony">
+          <figure class="testimony__quotes">
+            <img src="./statics/icon-quotes.svg" alt="" />
+          </figure>
+          <p class="testimony__message">
+            “We needed to automate our entire onboarding process. The team came
+            in and built out the whole journey. Since going live, user retention
+            has gone through the roof!”
+          </p>
+          <h3 class="testimony__person-name">Aiysha Reese</h3>
+          <h4 class="testimony__job-position">Founder of Manage</h4>
+          <figure class="testimony__photo">
+            <img src="./statics/avatar-aiysha.jpg" alt="aiysha's photo" />
+          </figure>
+        </article>
+
+        <article class="testimony">
+          <figure class="testimony__quotes">
+            <img src="./statics/icon-quotes.svg" alt="" />
+          </figure>
+          <p class="testimony__message">
+            “Amazing. Our team helped us build an app that delivered a new
+            experience for hiring a physio. The launch was an instant success
+            with 100k downloads in the first month.”
+          </p>
+          <h3 class="testimony__person-name">Arthur Clarke</h3>
+          <h4 class="testimony__job-position">Co-founder of MyPhysio</h4>
+          <figure class="testimony__photo">
+            <img src="./statics/avatar-arthur.jpg" alt="arthur's photo" />
+          </figure>
+        </article>
+      </section>
+    </main>
+
+    <aside class="aside">
+      <h2 class="aside__title">Ready to get started?</h2>
+      <button class="btn btn--primary-dark">contact us</button>
+    </aside>
+
+    <footer class="footer">
+      <figure class="footer__logo">
+        <img src="./statics/logo.svg" alt="my team's logo " />
+      </figure>
+      <nav class="footer__nav nav-secondary">
+        <a class="nav__link" href="./index.html">home</a>
+        <a class="nav__link" href="./about.html">about</a>
+      </nav>
+      <ul class="footer__address">
+        <li>987 Hillcrest Lane</li>
+        <li>Irvine, CA</li>
+        <li>California 92714</li>
+        <li>Call Us : 949-833-7432</li>
+      </ul>
+
+      <div class="icons footer__icons">
+        <a href="#" class="icons__img">
+          <figure>
+            <img src="./statics/icon-facebook.svg" alt="facebook's link" />
+          </figure>
+        </a>
+        <a href="#" class="icons__img">
+          <figure>
+            <img
+              src="./statics/icon-pinterest.svg"
+              alt="picon-pinterest's link"
+            />
+          </figure>
+        </a>
+        <a href="#" class="icons__img">
+          <figure>
+            <img
+              src="./statics/icon-twitter.svg"
+              alt="twiicon-twitter's link"
+            />
+          </figure>
+        </a>
+      </div>
+      <p class="footer__copyright">Copyright 2020. All Rights Reserved</p>
+    </footer>
   </body>
 </html>
